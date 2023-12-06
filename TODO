@@ -1,0 +1,63 @@
+Research
+    [x] What are my options
+
+Production
+    [ ] Pipeline for building android/iphone targets
+    [ ] How to integrate with Google play / Apple equivalent
+    [ ] How to get onto playstore / appstore
+    [ ] Play store payments
+
+Godot POC
+    [x] Get Android SDK
+        [x] Source
+            [x] Command line tools
+            [x] NDK
+        [x] Install
+            [x] Put in /opt/android/cmdline-tools/latest/
+            [x] Put in /opt/android/android-ndk-r26b
+            [x] Update to Java 21
+            [x] Accept licenses cmdline-tools/latest/bin/sdkmanager --licenses
+        [x] Env
+            export ANDROID_HOME=/opt/android
+            export ANDROID_NDK_ROOT=/opt/android/android-ndk-r26b
+    [x] Get Godot
+        [x] Source
+        [x] Compile
+            scons platform=android target=target_debug android_arch=arm32
+            scons platform=android target=target_debug android_arch=arm64
+            scons platform=android target=target_debug android_arch=armv7
+            scons platform=android target=target_debug android_arch=arm64v8
+            scons platform=android target=target_debug android_arch=x86
+            cd platform/android/java
+            ./gladlew build
+                [x] Go back to Java 17
+    [x] Run Godot on Android emulator
+        [S] Setup Android x86
+            https://stackoverflow.com/a/61247128
+        [x] Android studio emulrator
+            /opt/android/emulator/emulator -avd Pixel_3a_API_34_extension_level_7_x86_64
+            - Mutually exclusive with virtualbox
+        [x] sign APK
+            /opt/android/build-tools/34.0.0/apksigner sign --ks ~/.android/codesign.jks /home/tfuller/git/mobilegame/godot/platform/android/java/app/build/outputs/apk/dev/android_dev.apk
+        [x] Install APK
+            /opt/android/platform-tools/adb install /home/tfuller/git/mobilegame/godot/platform/android/java/app/build/outputs/apk/dev/android_dev.apk
+    [x] Make it do something
+        [x] Get demo projects
+        [x] ./godot --export-debug Android test2.apk
+
+First Game
+    [x] Start with base drag_and_drop
+    [x] Look like inventory
+    [x] Drag and drop combine
+    [x] peek on android
+
+POC
+    [x] Loading screen
+    [ ] Drag character
+    [ ] Local storage (Sqlite?)
+    [ ] local gate state
+    [ ] Change scenes
+    [ ] Hover effects
+    [ ] Sparkle sprite highlight effect
+    [ ] Open browser link / magnet
+    [ ] Touch to move

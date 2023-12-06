@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://brag0nvieuxc7"]
+
+[ext_resource type="Script" path="res://loading/goto_loading.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://crqh2ffmlo83w" path="res://loading/assets/loading-0.png" id="1_ycsyj"]
+
+[node name="LoadingScreen" type="Node2D"]
+
+[node name="root" type="Node2D" parent="."]
+script = ExtResource("1")
+
+[node name="Loading-0" type="Sprite2D" parent="."]
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("1_ycsyj")

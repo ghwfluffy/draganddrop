@@ -1,0 +1,4 @@
+*.swp
+test.apk*
+outfile.tmp
+commit-message.txt

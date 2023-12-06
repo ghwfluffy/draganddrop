@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://cq0jrirdgs0ab"]
+
+[ext_resource type="Script" path="res://loading/loading_scene.gd" id="1_0m4wf"]
+[ext_resource type="Texture2D" uid="uid://crqh2ffmlo83w" path="res://loading/assets/loading-0.png" id="1_ycsyj"]
+[ext_resource type="Texture2D" uid="uid://bhabqc4sg81jk" path="res://loading/assets/loading-1.png" id="2_bhhdi"]
+[ext_resource type="Texture2D" uid="uid://bujummyg7y2fo" path="res://loading/assets/loading-2.png" id="3_ce5el"]
+[ext_resource type="Texture2D" uid="uid://3j2dqfuchaeu" path="res://loading/assets/loading-3.png" id="4_cgkug"]
+[ext_resource type="Texture2D" uid="uid://c75q8fauydq13" path="res://loading/assets/loading-4.png" id="5_xrf2r"]
+[ext_resource type="Texture2D" uid="uid://yphir6mm042n" path="res://loading/assets/loading-5.png" id="6_hvl66"]
+[ext_resource type="Texture2D" uid="uid://cijob7myeua2" path="res://loading/assets/loading-6.png" id="7_3iru7"]
+[ext_resource type="Texture2D" uid="uid://c626saqsi2lhr" path="res://loading/assets/loading-7.png" id="8_0o3w5"]
+[ext_resource type="Texture2D" uid="uid://brnmm6nojyb3f" path="res://loading/assets/loading-8.png" id="9_ui5wa"]
+
+[sub_resource type="SystemFont" id="SystemFont_yuato"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_smp74"]
+font = SubResource("SystemFont_yuato")
+font_size = 61
+
+[node name="LoadingScreen" type="Node2D"]
+script = ExtResource("1_0m4wf")
+
+[node name="Loading-0" type="Sprite2D" parent="."]
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("1_ycsyj")
+
+[node name="Loading-1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("2_bhhdi")
+
+[node name="Loading-2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("3_ce5el")
+
+[node name="Loading-3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("4_cgkug")
+
+[node name="Loading-4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("5_xrf2r")
+
+[node name="Loading-5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("6_hvl66")
+
+[node name="Loading-6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("7_3iru7")
+
+[node name="Loading-7" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("8_0o3w5")
+
+[node name="Loading-8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.25, 637.25)
+scale = Vector2(3.19778, 4.60469)
+texture = ExtResource("9_ui5wa")
+
+[node name="Information" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 224.0
+offset_top = 4.0
+offset_right = 786.0
+offset_bottom = 269.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Loading..."
+label_settings = SubResource("LabelSettings_smp74")
