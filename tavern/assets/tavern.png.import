@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cew23n326kiwb"
-path="res://.godot/imported/boy-down.png-c8066049c04178b70bc68d10031d5d3a.ctex"
+uid="uid://2jk4jxtn0crw"
+path="res://.godot/imported/tavern.png-3d958a2aa58ce2abfb1eb61bebfeccb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/boy/boy-down.png"
-dest_files=["res://.godot/imported/boy-down.png-c8066049c04178b70bc68d10031d5d3a.ctex"]
+source_file="res://tavern/assets/tavern.png"
+dest_files=["res://.godot/imported/tavern.png-3d958a2aa58ce2abfb1eb61bebfeccb6.ctex"]
 
 [params]
 

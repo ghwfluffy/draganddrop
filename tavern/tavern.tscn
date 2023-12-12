@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://csdimyjknklp1"]
+
+[ext_resource type="Texture2D" uid="uid://2jk4jxtn0crw" path="res://tavern/assets/tavern.png" id="1_1jv3q"]
+[ext_resource type="Texture2D" uid="uid://cew23n326kiwb" path="res://character/assets/boy-down.png" id="2_iffae"]
+[ext_resource type="Script" path="res://tavern/tavern.gd" id="2_jbt48"]
+[ext_resource type="Script" path="res://tavern/Zoom.gd" id="5_5fs0w"]
+[ext_resource type="Script" path="res://tavern/DragDrop.gd" id="6_t0s7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umqnf"]
+size = Vector2(974.783, 714.542)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_udlpd"]
+radius = 105.498
+height = 434.396
+
+[node name="Tavern" type="Sprite2D"]
+position = Vector2(236, 579)
+scale = Vector2(3.56592, 3.56592)
+texture = ExtResource("1_1jv3q")
+script = ExtResource("2_jbt48")
+
+[node name="BackgroundArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackgroundArea"]
+position = Vector2(25.5193, -4.20651)
+shape = SubResource("RectangleShape2D_umqnf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" type="Area2D" parent="."]
+position = Vector2(-36.1758, 145.545)
+scale = Vector2(0.180757, 0.180757)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_iffae")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Player/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-6.20571, 10.8572)
+shape = SubResource("CapsuleShape2D_udlpd")
+
+[node name="DragDrop" type="Node" parent="."]
+script = ExtResource("6_t0s7c")
+
+[node name="Zoom" type="Node" parent="."]
+script = ExtResource("5_5fs0w")
+
+[connection signal="input_event" from="BackgroundArea" to="BackgroundArea" method="_on_input_event"]
+[connection signal="input_event" from="BackgroundArea" to="DragDrop" method="_on_background_area_input_event"]
+[connection signal="input_event" from="BackgroundArea" to="Zoom" method="_on_background_area_input_event"]
+[connection signal="input_event" from="Player" to="Player" method="_on_input_event"]
+[connection signal="input_event" from="Player" to="DragDrop" method="_on_player_input_event"]

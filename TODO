@@ -53,7 +53,13 @@ First Game
 
 POC
     [x] Loading screen
-    [ ] Drag character
+    [x] Drag character
+        [x] Place character
+        [x] Pick up character
+        [x] Scroll screen
+        [x] Character change depending on direction of movement
+        [x] Pinch zoom
+    [ ] Arrow show where character is offscreen
     [ ] Local storage (Sqlite?)
     [ ] local gate state
     [ ] Change scenes

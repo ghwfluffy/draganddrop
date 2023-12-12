@@ -1,6 +1,7 @@
 extends Node2D
 
-const target_scene_path = "res://main/drag_and_drop.tscn"
+#const target_scene_path = "res://main/drag_and_drop.tscn"
+const target_scene_path = "res://tavern/tavern.tscn"
 
 var loading_status : int
 var progress : Array[float]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cutu8oprmpkn"
-path="res://.godot/imported/boy-left.png-110d9b79b79fdd649079f4d8caf22c92.ctex"
+uid="uid://dvot0xggekq04"
+path="res://.godot/imported/tavern.webp-0ad2f5bab4ec37790299e47b8b7684ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/boy/boy-left.png"
-dest_files=["res://.godot/imported/boy-left.png-110d9b79b79fdd649079f4d8caf22c92.ctex"]
+source_file="res://assets/tavern.webp"
+dest_files=["res://.godot/imported/tavern.webp-0ad2f5bab4ec37790299e47b8b7684ff.ctex"]
 
 [params]
 
