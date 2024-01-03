@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://csdimyjknklp1"]
+[gd_scene load_steps=13 format=3 uid="uid://csdimyjknklp1"]
 
 [ext_resource type="Texture2D" uid="uid://2jk4jxtn0crw" path="res://tavern/assets/tavern.png" id="1_1jv3q"]
 [ext_resource type="Texture2D" uid="uid://cew23n326kiwb" path="res://character/assets/boy-down.png" id="2_iffae"]
 [ext_resource type="Script" path="res://tavern/tavern.gd" id="2_jbt48"]
 [ext_resource type="Script" path="res://tavern/Zoom.gd" id="5_5fs0w"]
+[ext_resource type="Texture2D" uid="uid://bdeoceiidr55m" path="res://hud/assets/menu-icons.png" id="6_61vb3"]
+[ext_resource type="Script" path="res://tavern/HUD.gd" id="6_dkea2"]
 [ext_resource type="Script" path="res://tavern/DragDrop.gd" id="6_t0s7c"]
+[ext_resource type="Texture2D" uid="uid://c2n004n0bufb7" path="res://hud/assets/inventory.png" id="8_uiocm"]
+[ext_resource type="Texture2D" uid="uid://dg32fntcmibww" path="res://items/assets/coins-0.png" id="9_nbjuc"]
+[ext_resource type="Texture2D" uid="uid://drejs0xu6tyi5" path="res://items/assets/coins-1.png" id="10_sf8qc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umqnf"]
 size = Vector2(974.783, 714.542)
@@ -46,8 +51,60 @@ script = ExtResource("6_t0s7c")
 [node name="Zoom" type="Node" parent="."]
 script = ExtResource("5_5fs0w")
 
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("6_dkea2")
+
+[node name="MenuIcons" type="Sprite2D" parent="HUD"]
+process_mode = 4
+position = Vector2(534.772, 112.625)
+scale = Vector2(0.366317, 0.366317)
+texture = ExtResource("6_61vb3")
+
+[node name="InventoryButton" type="Button" parent="HUD"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 365.0
+offset_top = 13.0
+offset_right = 376.0
+offset_bottom = 26.0
+scale = Vector2(9.5855, 13.8419)
+
+[node name="QuestsButton" type="Button" parent="HUD"]
+modulate = Color(0, 0, 0, 0)
+offset_left = 595.0
+offset_top = 10.0
+offset_right = 607.0
+offset_bottom = 18.0
+scale = Vector2(-9.13296, 23.7483)
+
+[node name="Inventory" type="Node" parent="HUD"]
+
+[node name="Bag" type="Sprite2D" parent="HUD/Inventory"]
+position = Vector2(360.9, 947)
+scale = Vector2(0.799525, 0.799525)
+texture = ExtResource("8_uiocm")
+
+[node name="Slots" type="Node" parent="HUD/Inventory"]
+
+[node name="Row0" type="Node" parent="HUD/Inventory/Slots"]
+
+[node name="Col0" type="Sprite2D" parent="HUD/Inventory/Slots/Row0"]
+position = Vector2(59, 682)
+scale = Vector2(0.678862, 0.678862)
+texture = ExtResource("9_nbjuc")
+
+[node name="Col1" type="Sprite2D" parent="HUD/Inventory/Slots/Row0"]
+position = Vector2(179, 682)
+scale = Vector2(0.678862, 0.678862)
+texture = ExtResource("9_nbjuc")
+
+[node name="Col2" type="Sprite2D" parent="HUD/Inventory/Slots/Row0"]
+position = Vector2(297, 683)
+scale = Vector2(0.678862, 0.678862)
+texture = ExtResource("10_sf8qc")
+
 [connection signal="input_event" from="BackgroundArea" to="BackgroundArea" method="_on_input_event"]
 [connection signal="input_event" from="BackgroundArea" to="DragDrop" method="_on_background_area_input_event"]
 [connection signal="input_event" from="BackgroundArea" to="Zoom" method="_on_background_area_input_event"]
 [connection signal="input_event" from="Player" to="Player" method="_on_input_event"]
 [connection signal="input_event" from="Player" to="DragDrop" method="_on_player_input_event"]
+[connection signal="pressed" from="HUD/InventoryButton" to="HUD" method="_on_inventory_button_pressed"]

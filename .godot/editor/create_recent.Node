@@ -1,8 +1,10 @@
+Button
 Node
+Sprite2D
+CanvasLayer
 CollisionShape2D
 Area2D
 CharacterBody2D
 Camera2D
 Node2D
 TouchScreenButton
-Sprite2D

@@ -8,10 +8,10 @@ var dragging = null
 class Draggable:
     func move(delta) -> void:
         pass
-        
+
     func done_moving() -> void:
         pass
-        
+
     func is_background() -> bool:
         return false
 
@@ -44,11 +44,11 @@ class DragPlayer extends Draggable:
     var camera = null
     var player = null
     var sprite = null
-    
+
 class DragCamera extends Draggable:
     func _init(camera):
         self.camera = camera
-    
+
     func move(delta) -> void:
         delta.x *= -1
         delta.y *= -1
