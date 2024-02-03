@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://csdimyjknklp1"]
+[gd_scene load_steps=14 format=3 uid="uid://csdimyjknklp1"]
 
 [ext_resource type="Texture2D" uid="uid://2jk4jxtn0crw" path="res://tavern/assets/tavern.png" id="1_1jv3q"]
 [ext_resource type="Texture2D" uid="uid://cew23n326kiwb" path="res://character/assets/boy-down.png" id="2_iffae"]
@@ -17,6 +17,11 @@ size = Vector2(974.783, 714.542)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_udlpd"]
 radius = 105.498
 height = 434.396
+
+[sub_resource type="LabelSettings" id="LabelSettings_vrffd"]
+font_size = 32
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Tavern" type="Sprite2D"]
 position = Vector2(236, 579)
@@ -101,6 +106,14 @@ texture = ExtResource("9_nbjuc")
 position = Vector2(297, 683)
 scale = Vector2(0.678862, 0.678862)
 texture = ExtResource("10_sf8qc")
+
+[node name="DEBUG" type="Label" parent="HUD"]
+offset_top = -1.0
+offset_right = 729.0
+offset_bottom = 322.0
+text = "DEBUG"
+label_settings = SubResource("LabelSettings_vrffd")
+autowrap_mode = 2
 
 [connection signal="input_event" from="BackgroundArea" to="BackgroundArea" method="_on_input_event"]
 [connection signal="input_event" from="BackgroundArea" to="DragDrop" method="_on_background_area_input_event"]

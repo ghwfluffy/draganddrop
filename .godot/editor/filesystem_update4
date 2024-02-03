@@ -1,6 +1,2 @@
 res://tavern/tavern.tscn
-res://character/character.gd
-res://tavern/DragDrop.gd
-res://tavern/tavern.gd
 res://tavern/Zoom.gd
-res://tavern/HUD.gd

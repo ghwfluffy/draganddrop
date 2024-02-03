@@ -59,7 +59,10 @@ POC
         [x] Scroll screen
         [x] Character change depending on direction of movement
         [x] Pinch zoom
-    [ ] Inventory screen
+    [x] Two-touch zoom
+    [ ] InputEventPanGesture
+    [\] Inventory screen
+    [ ] Make label hidden for debug mode
     [ ] Arrow show where character is offscreen
     [ ] Local storage (Sqlite?)
     [ ] local gate state
